@@ -6,11 +6,18 @@ body {
 
 body {
     min-height: 100vh;
-    background-image: url("img/supermot1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.accueil {
+    background-image: url("img/supermot1.png");
+}
+
+.histoire {
+    background-image: url("img/history.png");
 }
 
 .hero-title {
