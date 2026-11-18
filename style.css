@@ -1,0 +1,139 @@
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("img/supermot1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-title h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero-title p {
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+.buttons {
+    position: absolute;
+    inset: 0;
+}
+
+.card {
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    letter-spacing: 3px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    transition: background 0.4s ease;
+}
+
+.card span {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    z-index: 5;
+}
+
+.card:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.builds {
+    top: 22%;
+    left: 20%;
+    background-image: url("img/builds.jfif");
+}
+
+.parts {
+    top: 22%;
+    right: 20%;
+    background-image: url("img/parts.jfif");
+}
+
+.gallery {
+    bottom: 22%;
+    left: 20%;
+    background-image: url("img/gallery.jfif");
+}
+
+.about {
+    bottom: 22%;
+    right: 20%;
+    background-image: url("img/about.jfif");
+}
+
+@media (max-width: 700px) {
+    .hero-title h1 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+    .hero-title p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    .card {
+        width: 125px;
+        height: 65px;
+        font-size: 17px;
+    }
+    .builds {
+        left: 5%;
+    }
+    .parts {
+        right: 5%;
+    }
+    .gallery {
+        left: 5%;
+    }
+    .about {
+        right: 5%;
+    }
+}
